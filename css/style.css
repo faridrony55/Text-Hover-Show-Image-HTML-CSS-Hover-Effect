@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+section{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+.container{
+	width: calc(100% - 200px);
+	margin: auto;
+	padding: 100px;
+}
+ul{ 
+	list-style: none;
+	text-align: center;
+}
+ul li{
+	font-size: 60px;
+	line-height: 1.5;
+	display: inline-block;
+	position: relative;
+}
+
+ul li span{
+	cursor: pointer;
+}
+.hovring ul li img{
+	visibility: hidden;
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	z-index: 1;
+	transition: all 0.3s ease;
+	transform: scale(0);
+	width: 70%;
+}
+.hovring ul li:hover img{ 
+	visibility: visible;
+	transform: scale(1);
+}
+
+
+.hovring ul:hover li span{
+	opacity: 0.5;
+}
+.hovring ul li:hover span{
+	opacity: 1;
+}
